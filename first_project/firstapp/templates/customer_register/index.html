@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimeCode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    nav.navbar.navbar-expand-lg {
+        background-color: #000000;
+        width: auto;
+        height: 150px;
+    }
+
+    a.navbar-brand {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 42px;
+        text-align: left;
+        width: 146px;
+        height: 42px;
+        top: 54px;
+        margin-left: 100px;
+    }
+
+    ul.navbar-nav.ml-auto {
+        width: 596px;
+        height: 30px;
+        margin-top: 0px;
+        margin-left: 150px;
+        color: #FFFFFF;
+
+    }
+
+    a.nav-link {
+        color: #ffffff;
+        font-size: 20px;
+        width: auto;
+        height: 30px;
+        margin-top: 0px;
+        margin-right: 15px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    button.submit {
+        display: flex;
+        width: 174px;
+        height: 54px;
+        margin-left: 140px;
+        margin-top: 18px;
+        padding: 12px 28px 12px 28px;
+        gap: 10px;
+        border-radius: 5px 0px 0px 0px;
+        justify-content: center;
+        font-size: 20px;
+        color: #000000;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        background-color: #84cc16;
+        border-radius: 5px;
+    }
+
+    i.fas.fa-sign-in-alt {
+        color: #000000;
+    }
+
+    .content {
+        display: flex;
+        background-color: #000000;
+        height: 745px;
+    }
+
+    .content1 {
+        width: 49%;
+        margin-left: 100px;
+        margin-top: 80px;
+    }
+
+    .content1 h6 {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        color: #84cc16;
+        width: 166px;
+        height: 30px;
+    }
+
+    .content1 h3 {
+        font-family: Poppins;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 96px;
+        text-align: left;
+        color: #FFFFFF;
+        margin-top: 25px;
+        width: 601px;
+        height: 192px;
+    }
+
+    .content1 p {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+        text-align: left;
+        color: #FFFFFF;
+        margin-top: 40px;
+        width: 502px;
+        height: 114px;
+    }
+
+    a.btn.custom-btn {
+        background-color: #84cc16;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+        padding: 15px 5px 15px 40px;
+        border-radius: 8px;
+        width: 252px;
+        height: 63px;
+        color: #000000;
+        margin-top: 80px;
+    }
+
+    .content2 {
+        width: 49%;
+    }
+
+    .content2 img {
+        width: 583px;
+        height: 469px;
+        border-radius: 10px;
+        margin-top: 121px;
+    }
+
+    .a1 {
+        display: flex;
+    }
+
+    .a1 {
+        width: auto;
+        height: 110px;
+        background: linear-gradient(270deg, #000000 1.94%, #1B1715 44.97%);
+        color: #FFFFFF;
+        padding: 43px 100px;
+    }
+
+    p.a11 {
+        width: 291px;
+        height: 24px;
+    }
+
+    p.a12 {
+        width: 209px;
+        height: 24px;
+        margin-left: 30px;
+    }
+
+    p.a13 {
+        width: 226px;
+        height: 24px;
+        margin-left: 30px;
+    }
+
+    .social-icons {
+        margin-left: 400px;
+    }
+
+    .social-icons a {
+        color: #ffffff;
+    }
+
+    i.fas.fa-map-marker-alt {
+        width: 24px;
+        height: 24px;
+    }
+
+    i.fa-solid.fa-phone {
+        width: 24px;
+        height: 24px;
+    }
+
+    i.fa-solid.fa-envelope {
+        width: 24px;
+        height: 24px;
+    }
+
+    .box {
+        height: 791px;
+        padding: 150px 100px;
+        background-color: #000000;
+    }
+
+    h2.text1 {
+        font-family: Poppins;
+        width: 159px;
+        height: 36px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #84cc16;
+        margin-left: 535px;
+    }
+
+    h1.text2 {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    h1.text3 {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .row {
+        width: 1272px;
+        height: 210px;
+        margin-top: 100px;
+    }
+
+    .card {
+        width: 295px;
+        height: 210px;
+        border-radius: 10px 0px 0px 0px;
+        background-color: #120F0E;
+        border-radius: 10px;
+    }
+
+    .card-body {
+        color: #ffffff;
+        width: 218px;
+        height: 141px;
+        margin-left: 38px;
+    }
+
+    i.fas.fa-code.icon {
+        margin-left: 80px;
+        color: #84cc16;
+        width: 40px;
+        height: 32px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    h5.card-title {
+        width: 200px;
+        height: 36px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    p.card-text {
+        width: 218px;
+        height: 48px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+        margin-left: -10px;
+    }
+
+    i.fa-brands.fa-android {
+        color: #84cc16;
+        width: 40px;
+        height: 32px;
+        margin-left: 80px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    i.fas.fa-desktop.icon {
+        color: #84cc16;
+        width: 40px;
+        height: 32px;
+        margin-left: 80px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    i.fa-solid.fa-map {
+        color: #84cc16;
+        width: 40px;
+        height: 32px;
+        margin-left: 80px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .box2 {
+        height: 700px;
+        width: auto;
+        background-color: #000000;
+        margin-top: -100px;
+    }
+
+    .row.align-items-center {
+        width: auto;
+        height: 583px;
+        padding: 80px 100px;
+    }
+
+    img.img-fluid.rounded {
+        width: 613px;
+        height: 513px;
+    }
+
+    .col-md-5 {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul.benefits-list {
+        margin-top: 40px;
+    }
+
+    .benefits-list li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #ffffff;
+        height: 25px;
+        align-items: baseline;
+    }
+
+    .benefits-list li i {
+        color: #8fdc4f;
+        margin-right: 10px;
+    }
+
+    .join-btn {
+        color: #000000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #84CC16;
+        width: 605px;
+        height: 58px;
+        margin-top: 45px;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .col-md-6 {
+        display: flex;
+    }
+
+    .skills {
+        background-color: #D9D9D9;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 318px;
+        position: absolute;
+        font-family: Poppins;
+        line-height: 22.5px;
+        width: 180px;
+        height: 265px;
+        margin-left: 64px;
+    }
+
+    .skills h4 {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22.5px;
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    .skills ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .skills li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 29.02px;
+        margin-bottom: 15px;
+    }
+
+    .skills li img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    h3.text {
+        width: 186px;
+        height: 36px;
+        color: #84CC16;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    h1.text4 {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: left;
+        color: #ffffff;
+        width: 503px;
+        height: 120px;
+    }
+
+    li.n1 {
+        height: 48px;
+        align-items: baseline;
+    }
+
+    i.fas.fa-check-square {
+        width: 25px;
+        height: 25px;
+        color: #84CC16;
+    }
+
+    .cou-det {
+        width: auto;
+        height: 741px;
+        background-color: #120F0E;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        margin: 0;
+        padding: 100px 100px;
+        text-align: center;
+    }
+
+    .cou-det p {
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        color: #84CC16;
+    }
+
+    .cou-det h2 {
+        color: #A4D039;
+        margin-bottom: 20px;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 100px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        justify-items: center;
+        padding: 0 20px;
+    }
+
+    .course {
+        display: flex;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+        width: 190px;
+        height: 120px;
+
+    }
+
+    .course:hover {
+        transform: scale(1.05);
+    }
+
+    .course img {
+        width: 55px;
+        height: 55px;
+        margin-top: 10px;
+    }
+
+    .course h3 {
+        margin: 10px 0 5px;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        color: #000000;
+    }
+
+    .course p {
+        color: #000000;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19.5px;
+        text-align: left;
+
+    }
+
+    .desc {
+        text-align: justify;
+        margin-left: 15px;
+        width: 61px;
+        height: 49px;
+    }
+
+    .pur-card {
+        padding: 150px 100px;
+        background-color: #000000;
+        color: #FFFFFF;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        height: 1674px;
+        width: auto;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h3 {
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: left;
+        width: 169px;
+        height: 36px;
+    }
+
+    .section-title h2 {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: left;
+        display: inline;
+    }
+
+    .btn-custom {
+        background-color: #84CC16;
+        color: #000000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        display: inline-block;
+        margin-bottom: 15px;
+        margin-left: 668px;
+        width: 165px;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .btn-custom:hover {
+        background-color: #8FBF30;
+        color: white;
+    }
+
+    .course-card {
+        width: 400px;
+        height: 315px;
+        background-color: #D9D9D9;
+    }
+
+    h3.course-title {
+        color: #000000;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        margin-left: 28px;
+    }
+
+    .cord-custom {
+        background-color: #120F0E;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .cord-custom:hover {
+        transform: scale(1.05);
+    }
+
+    .cord-custom img {
+        border-radius: 10px 10px 0 0;
+        width: 400px;
+        height: 230px;
+        object-fit: cover;
+        padding: 35px 35px 20px 35px;
+    }
+
+    .m1 {
+        width: 400px;
+        height: 220px;
+    }
+
+    .m1-title {
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+
+    .m1-text {
+        color: #AFAEC3;
+        margin: 20px 25px;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        width: 178px;
+        height: 24px;
+    }
+
+    .price {
+        color: #84CC16;
+        font-weight: bold;
+        margin-bottom: 15px;
+        width: 104px;
+        height: 30px;
+        margin-left: 25px;
+    }
+
+    .badge-js {
+        background-color: #FFD700;
+        color: #000000;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    p.m1-rating {
+        margin-left: 25px;
+        font-family: Poppins;
+        font-size: 15px;
+    }
+
+    span.fas.fa-star {
+        color: gold;
+    }
+
+    footer {
+        background-color: #120F0E;
+        color: #ffffff;
+        padding: 50px 100px;
+        width: auto;
+        height: 480px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+    }
+
+    .footer-left h2 {
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 57px;
+        text-align: left;
+    }
+
+    .footer-left p {
+        margin: 8px 0;
+        color: #E7E7E7;
+        width: 273px;
+        height: 35px;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 27px;
+        text-align: left;
+
+    }
+
+    .footer-left i {
+        color: #84CC16;
+        margin-right: 10px;
+    }
+
+    .footer-right {
+        text-align: right;
+        max-width: 400px;
+        margin-left: auto;
+        margin-top: 65px;
+    }
+
+    .footer-right h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: Poppins;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 42px;
+        text-align: right;
+    }
+
+    .footer-right form {
+        display: flex;
+        align-items: center;
+        margin-top: 43px;
+    }
+
+    .footer-right input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        flex: 1;
+        color: #FFFFFF;
+    }
+
+    .footer-right button {
+        padding: 10px 20px;
+        background-color: #84CC16;
+        border: none;
+        color: #111;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .footer-bottom {
+        background-color: #84CC16;
+        color: #111;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .footer-bottom .social-icons i {
+        font-size: 20px;
+        margin-left: 10px;
+        color: #111;
+        cursor: pointer;
+    }
+
+    .footer-bottom .social-icons i:hover {
+        color: #333;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Lime<span style="color: #84cc16;">Code</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Kelas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Alur Belajar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button class="submit">Register
+                    <a class="bt-link" href="#"><i class="fas fa-sign-in-alt"></i></a>
+                </button>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="content1">
+                <h6># Janganmalas</h6>
+                <h3>Lime <span style="color: #84cc16;">Code</span> Belajar Coding Simple.</h3>
+                <p>Ayo Pelajuri Skill Baru Sesuai Dengan Minatmu.<br>
+                    Kumpulan Kelas Coding Gratis Tentang Html, Css,<br>
+                    Javascript, Php, Laravel, Python, Go-lang, Dll.</p>
+                <div class="btn1">
+                    <a href="#" class="btn custom-btn">
+                        Mulai Sekarang
+                        <span class="arrow-icon">></span>
+                    </a>
+                </div>
+            </div>
+            <div class="content2">
+                <img src="https://s3-alpha-sig.figma.com/img/890c/1001/fe1a470967768b4d00ffd92f95d2f117?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HtGiauU4Ka2wOmMC9~LdL3v~uoXUKLcdHEw3XLccizp9Jpeguk6KVO6b~az8bzDqMZaDxldjt1MjHrJujJgON~lAF-mOjiS0txyzTFwvV8Qb8U0kntI5tRAKfKTds4lMm6JuBrGkHXXKPMxwptcytz0GWF7DbWO9lc4HEQ2t2Il8di7D12FbbFP32n~NmNu7oSNb8Wa4NooVxhvnJUyjhA9LACcPBFqLbjwwvNpOKGbDz~dQ9gGkK6vnRRJk1tWugfyiKY3UMkNxmExIr9OKmf2Uo32HxejoH72ZOpgzb6vv~OsXemMC6BIzaNG2THZlC7BIVvh8qknA6UxR-IElEw__"
+                    alt="image">
+            </div>
+        </div>
+        <div class="a1">
+            <p class="a11"><i class='fas fa-map-marker-alt'></i>Jl. Adama Makassar, Indonesia</p>
+            <p class="a12"><i class="fa-solid fa-phone"></i>+62 822 - 3843-4234</p>
+            <p class="a13"><i class="fa-solid fa-envelope"></i>Limecode@Gmail.com</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="box">
+            <h2 class="text1">Mulai Belajar</h2>
+            <h1 class="text2">Category Kelas Online Di</h1>
+            <h1 class="text3">Lime <span class="text" style="color: #84cc16;">Code</span></h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon">
+                                <i class="fas fa-code icon"></i>
+                            </div>
+                            <h5 class="card-title">Kelas Web Dev</h5>
+                            <p class="card-text">Belajar Front End, Back End Ataupun Full Stack</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon">
+                                <i class="fa-brands fa-android"></i></i>
+                            </div>
+                            <h5 class="card-title">Kelas Android Dev</h5>
+                            <p class="card-text">Belajar Flutter, Kotlin<br>Ataupun React Native</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon">
+                                <i class="fas fa-desktop icon"></i>
+                            </div>
+                            <h5 class="card-title">Kelas Design</h5>
+                            <p class="card-text">Belajar UI/UX, 3D Ataupun<br>Graphic Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon">
+                                <i class="fa-solid fa-map"></i>
+                            </div>
+                            <h5 class="card-title">Road Map</h5>
+                            <p class="card-text">Jelajah Jalur Belajar<br>Yang Kamu Mau</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://s3-alpha-sig.figma.com/img/5eef/3daa/5f8ca53461e54fb66eb90b782fcac076?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pTuK1Pl8PMfjTNtRjyuuVrQBrhPO4hoyZ1N-20xoRPsBaXzSaeta8gm02i9BbAUCs6VyvD9WC~OiJ8sMmr7Irgs-AhQsW27xiydAlsf4gpUbTMejiUGJpldioPqFrBtOp5bcWdzNkXSTyBknUAryVbalIAE3TwoTOmsLhQubgSVwFMXFfdjJcp1O6uX0yZmoyGErVwwDGAc8jrpsTKjiLrGX9KV5yQrOQ8gCbRHzOW2uX2cCc2gTnJwDl6pKagKVYQvgOu10j6dCKEWYsBwCXmMxedcgcJjDaDOQs9VcuEX6R~xPkomidsgMsV6gEMuCfqt0VO46LRzw66SMMY4e6Q__"
+                        alt="Learning Image" class="img-fluid rounded">
+                    <div class="skills">
+                        <h4>Pelajari Skill Baru</h4>
+                        <ul>
+                            <li><img src="https://s3-alpha-sig.figma.com/img/6f13/120a/27a076cec80215226d0b9cdd17ef2fa3?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TgjUrXMzfoLznfEAk7lX32DQYGhszK9Bx70ZOT8~Pw6iWZsqhKIUhQBaYqLiwdEBTZNYLrXH5mCQteGw8LpE~pRfmmD7Mu~DO-3X63979SdZHkofADkANBy61hX-bqaWa9Uv~WthWgATBMCiXd7tLuguwWrzyQXmFl-rhcLKm2y6XhtVkBU7eOQcBQ2Np1qmnA7NIzwNiP4RZfTt943JdRZt9Q7pEUcH3S0HDUXFgVDZTt5GGtrLQx5FTqcFK~L8unXBRq1gdUqOkDwj9c8nB234l7se395yH86UrbHjmcAmHj1iQYS5SnvTneea3D87hA~77X4X5MTfffEMoML5sg__"
+                                    alt="Laravel">
+                                Laravel</li>
+                            <li><img src="https://s3-alpha-sig.figma.com/img/9d9f/a8cd/347857087eb671fcc3693dc8c671f733?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C4qYT6gvpKZxzNirrlNzN969AtzQEOmauS9KBAu1lTgyVIJcD7bRAvZ1bEBBpJfFbf~KIKjDYEIDFN0v8xR3e5KkvWr9WeYmIprMvzZRzVTOzwuYix-SbN~vuVubKtOf7cfipVXlowyr37wG46g7o-2PXzz2ZyxwviGnbx3537CeNWzlaiRoSqPVZOMF0XWpg4puaTsGGTHdy08uvXyDYutOV3bEIWJq5QgzcfPJFd89B7UKpbjMGbkOQFYTrN~Q7~ST6sdxTsZXNz-xjdXmI7PB0p6adQ-uzSaIyzu7DckP~liOHXHWaGGql3x9OkhTXbyRk~sTAh1o54VxTezhpg__"
+                                    alt="JavaScript"> JavaScript</li>
+                            <li><img src="https://s3-alpha-sig.figma.com/img/dd2c/e59f/772d96b33e43838d1b850a6f4fad80d7?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lwij7PiJ0y7XWhKa2HEROHDwyls-o2UNFWcll4M~EZ6KIGo2Q2OTOQI~UUY3iIpgplrIZunR8seevRQ~vTIt7IMI~pUsTf6O3LPnmHYXjM~oAFvquMqRb7WpmSclvsEct-9o8SlRbNbZOeIVeD2bJXpeJccrpP66ZjAbLcWMEz-UMejDfs7fDooyInTX9qlLftGkA3~USAATUa-54mAtD-Azi6vHOY8gpka4-GUPzlezGE4GtSBoJgxZdWGUB2VrQmxSmhFEW2WrlcVgP3i9RL~8lb4qqb5ErmfRvvGlpSwGWgrpYzc7f-lPPna4Jom2AXFPBTk89dx90k-QftgEng__"
+                                    alt="React Js">
+                                React Js</li>
+                            <li><img src="https://s3-alpha-sig.figma.com/img/d79c/54e8/36d644d1538386ef416a2c1578d7dd6c?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j1U9YGLkVnvs8QaVJ7XROb7q~MCiUykvmHof517Y-8ftm7iwmfa~PN1zkFlIgV4we6XG-roqMR5UzjLG1YWIS0yg3h~sJcQkS1eUsGbqslbLyaU5Bjr8QWj7vSd~bCCQSy06D0X92kN5MNDycRA0cXSvbfhdC6aVPJcT~fuzQ~FHE7rF7uMzdqqzNTz0fexHD1zFOgnphoBESJYCgK1jgzEpXWhCulYekFMh7~BfHLclZ5u2l3BvRI1CliNXH3di325m0AM8S~RmQ1rhap2u7D2tv936s2GTnWlEqH94-eAeXjOFVee5IR9xspTi65rBGVGE6RP0Eh61DKwMdroTOw__"
+                                    alt="PHP Native">
+                                PHP Native</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3 class="text">Join Lime Code</h3>
+                    <h1 class="text4">Banyak Keuntungan Bergabung Di Lime Code</h1>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-square"></i> Akses Video Selamanya</li>
+                        <li><i class="fas fa-check-square"></i> Meningkatkan Skill Terbaru Kamu</li>
+                        <li><i class="fas fa-check-square"></i> Membangun Networking Yang Luas</li>
+                        <li class="n1"><i class="fas fa-check-square"></i> Forum Bertanya Tentang Web, Android
+                            Dan<br>Design
+                        </li>
+                    </ul>
+                    <a href="#">
+                        <button class="join-btn">Join Kelas Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cou-det">
+            <p>Eksplorasi Materi</p>
+            <h2>Materi Kelas Online Di Lime<br><span style="color: #84CC16;">Code</span> Materi Terbaru</h2>
+
+            <div class="grid">
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/6f13/120a/27a076cec80215226d0b9cdd17ef2fa3?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TgjUrXMzfoLznfEAk7lX32DQYGhszK9Bx70ZOT8~Pw6iWZsqhKIUhQBaYqLiwdEBTZNYLrXH5mCQteGw8LpE~pRfmmD7Mu~DO-3X63979SdZHkofADkANBy61hX-bqaWa9Uv~WthWgATBMCiXd7tLuguwWrzyQXmFl-rhcLKm2y6XhtVkBU7eOQcBQ2Np1qmnA7NIzwNiP4RZfTt943JdRZt9Q7pEUcH3S0HDUXFgVDZTt5GGtrLQx5FTqcFK~L8unXBRq1gdUqOkDwj9c8nB234l7se395yH86UrbHjmcAmHj1iQYS5SnvTneea3D87hA~77X4X5MTfffEMoML5sg__"
+                        alt="Laravel">
+                    <div class="desc">
+                        <h3>Laravel</h3>
+                        <p>Back End</p>
+                    </div>
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/d79c/54e8/36d644d1538386ef416a2c1578d7dd6c?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j1U9YGLkVnvs8QaVJ7XROb7q~MCiUykvmHof517Y-8ftm7iwmfa~PN1zkFlIgV4we6XG-roqMR5UzjLG1YWIS0yg3h~sJcQkS1eUsGbqslbLyaU5Bjr8QWj7vSd~bCCQSy06D0X92kN5MNDycRA0cXSvbfhdC6aVPJcT~fuzQ~FHE7rF7uMzdqqzNTz0fexHD1zFOgnphoBESJYCgK1jgzEpXWhCulYekFMh7~BfHLclZ5u2l3BvRI1CliNXH3di325m0AM8S~RmQ1rhap2u7D2tv936s2GTnWlEqH94-eAeXjOFVee5IR9xspTi65rBGVGE6RP0Eh61DKwMdroTOw__"
+                        alt="Php Native">
+                    <div class="desc">
+                        <h3>Php Native</h3>
+                        <p>Back End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/9d9f/a8cd/347857087eb671fcc3693dc8c671f733?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C4qYT6gvpKZxzNirrlNzN969AtzQEOmauS9KBAu1lTgyVIJcD7bRAvZ1bEBBpJfFbf~KIKjDYEIDFN0v8xR3e5KkvWr9WeYmIprMvzZRzVTOzwuYix-SbN~vuVubKtOf7cfipVXlowyr37wG46g7o-2PXzz2ZyxwviGnbx3537CeNWzlaiRoSqPVZOMF0XWpg4puaTsGGTHdy08uvXyDYutOV3bEIWJq5QgzcfPJFd89B7UKpbjMGbkOQFYTrN~Q7~ST6sdxTsZXNz-xjdXmI7PB0p6adQ-uzSaIyzu7DckP~liOHXHWaGGql3x9OkhTXbyRk~sTAh1o54VxTezhpg__"
+                        alt="Javascript">
+                    <div class="desc">
+                        <h3>Javascript</h3>
+                        <p>Front End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/dd2c/e59f/772d96b33e43838d1b850a6f4fad80d7?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lwij7PiJ0y7XWhKa2HEROHDwyls-o2UNFWcll4M~EZ6KIGo2Q2OTOQI~UUY3iIpgplrIZunR8seevRQ~vTIt7IMI~pUsTf6O3LPnmHYXjM~oAFvquMqRb7WpmSclvsEct-9o8SlRbNbZOeIVeD2bJXpeJccrpP66ZjAbLcWMEz-UMejDfs7fDooyInTX9qlLftGkA3~USAATUa-54mAtD-Azi6vHOY8gpka4-GUPzlezGE4GtSBoJgxZdWGUB2VrQmxSmhFEW2WrlcVgP3i9RL~8lb4qqb5ErmfRvvGlpSwGWgrpYzc7f-lPPna4Jom2AXFPBTk89dx90k-QftgEng__"
+                        alt="React Js">
+                    <div class="desc">
+                        <h3>React Js</h3>
+                        <p>Front End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/9631/8c38/e7abe87e605754762ee885dedd683f58?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LZUhlu7efykrP4uwK7bDt4QFYA3ec9ZrKsmHRR6f-9AfhR47T~sUYLkOcEl6ovw7A1TNkN9f6cLg3B-eWs7HBArBdP4BXy95QI8583eJSGGw4o~PdbhMBZ5V-eLjRmq~uqJjpkr9ck8mXV5ISTrn1-2g0yqJmDFQao6oes46K7ur1SuOTQvkrhR0e4-zJkZT~d-iUJgcAYma9TeoVHx44G2iDcTp3GAeXgIqze3ibytcBx1Jelb7w5oE0OXgWyc5dEQRISWKUSjWeArXaE1GodszkUgREDadJszFhrc92KHMicQLiD8suYfoivZWN-KrlF6gzahERKvrz6-7C4aUbw__"
+                        alt="Tailwind">
+                    <div class="desc">
+                        <h3>Tailwind</h3>
+                        <p>Front End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ba5/4044/d8658bbb3fe267543532844dd4d787de?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZwPEYKSWOH-8zmecxiz2~IEXmmWKyTCAG2hhTTSbr09PrYV3u9rps08VR5WzytLfGf1Rdr0vhmoKSERu-R2AHCXJKOS6XRjpxGwveWz6W3UVcFI6GLQOg0FO5~MfMv1E4V3hFotX-hd~k0GZFMZ5gBFlw6q60YeBTFYHwG7pCZC-yJgrYGd6cFioT-~p6WZV2u8U3XXM2apPgbBSxBh6t~7tiTtD9C4-67Q0EflYIAtgYaWWC~MWZ05OVkPTIMTFiPmmm-slUllpvaDpyBcFsIFxVrTylYJvQiekjmiYRhMZHrRLxXcf8SyCN0qT9kqgHOAyP~R3BqpBR7hwrTb6mw__"
+                        alt="Figma">
+                    <div class="desc">
+                        <h3>Figma</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/c82c/fb29/dfa05aa4c8f4d0038576b5b4b3f2c57d?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cefhmrv7tIyQsxdGb4HipgF7CuWvmEUbhhRDnVcc1fOf7PufFS6Hjw6sd0ZeuojDx3OQWnjntOqc7avGs9v0EdQkCqevD80XyapDiFPsDL~s6-h95-IKBDUnbYXWUBeG-yTJdRu4Z9OeMwWkET5wkylfo4QqJT5e7D2ppPiVjxCfD3BCdYYwOvxT7vwIKoQMRaOnHOwVNmYJOYNlWrOWZcP8MUjHve1s-A-bMIyTbVjL5g4hTPB7mqbDRwKp7kLGTHNURU~K7Ykfsg~rC4iuo2Lm1JSONjyPRDy988kwBCuBKWYuIlWF3861XjP7-v4eJHsyi5s3hDOC4IdnZTTwfg__"
+                        alt="Vue Js">
+                    <div class="desc">
+                        <h3>Vue Js</h3>
+                        <p>Front End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/c3e3/feea/51e573fdb7f68a0234930fbaa4fa25b7?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L9jp23IOw4DWDxLUz2KLytbAY46NHJSAPsrK8mN6L9GEyAh4sz0Ncj9ZqVhG7i2Kwa5pncfroMYyvl4XVuEgOub8HSTJ50zV6nhq7HuQiKNVKVSMpJRJJGr6JimvbW1PbEzrZTzn2j1X6OQmiFsvQCPvZ9Bn86M0AaHz-6w-6wvtdwklEmUIvIQnVLJc-0K~c5pdbORXL2lKkgrYR0NCP2WFXhvgWvb2MU2Y6b3xVjTHITpGHoKbogR5f31vLxLzt9OCF7ny5xGFwuPxYGWkA85goWKTfrAs~sqd~KmW1pM4p2pnZ1PCaHbzO~Ez0KofDr~49MXvlHMeq6eC8HDBOA__"
+                        alt="Blender">
+                    <div class="desc">
+                        <h3>Blender</h3>
+                        <p>3D Design</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/4864/3ab9/9d2a069d7bd52c41970721c05127ab17?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K~VRPhaBK9VBO5VqVFqtmFoNvYHSYmv9AKVuxtj5~cLdWBa0qZa3MzkVEjOkhYDQAp4dOFOT2EFDRAk-7g6BhdZidfaELQQL-TIYQgR60zsAD-dPa~RCbUCo7yPT~AmIyynMrSCHQo4nNtZc2gjTXyE437EHN-6Q~O4PZ9mwNPkroO8tKYMM0Zj-ZL5Vcb81FH5wqNynIkqaj8Hv~Bqcu0Rqw7udvsOlBHbSki4Olk6VW~EtXrCj~AvrJnzOak6wP0Wg~TIYM7MRsIR06vA0-PELCtM14GQSRUolJNsiYOkxVEtpPlBySTupaE88TtXAMKYssCy02gviB7hA8kbltA__"
+                        alt="Kotlin">
+                    <div class="desc">
+                        <h3>Kotlin</h3>
+                        <p>Android</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbd7/d179/92731f62ce088bf46478b3e64cf1bc89?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cj9zZ8uXp2bFaRpSR1ven7rnPfiA4sDSW61kd43ikhHImeElQKjf7ErJmUyply~fNO9MpM-Abg9btiEIS1dxuzgXtuANkt4vAtFxnTZqK-OS5sJ4H2amqlrmTOkIZB1pA7coCu3gQVLrgMn8MOlW-7bg8gEZcM-NEcI95UZmi7JyFcCtf7Z9z2so0Jwyj9MC47QpKahzDVSQo2CiJnojHiytNKdI4pOA8qHX~G2YCTPnkt8eMDaN4nxJW6~8bU6mOlDjfglYJSbzYIJU7BrzY~KRKXPfmjacETqD0T8HySM2AJ81iSuiRsYXcJGNmPEYFBw09GfgXemZoGg3qal3jQ__"
+                        alt="Python">
+                    <div class="desc">
+                        <h3>Python</h3>
+                        <p>Data Science</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/1d5a/891d/0be2cc601785c30943d60c3e10bef5e6?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fhbSdT6IyOsoxP2F8qGa45sWrEgwRhue5aMin5tCJn4q~2jx-m5pn4V3WCk9xiggE6xf3RuOTf8YKC5EvBtS9BzgF-sbINC44Umhjk6Zqs-ff06LCZN9OsLrqDfa3Zwnjcy4Jj5V4j9dEEVbH0-qbjWPIVIMdEzUCI-ZqRQyc-I5AvO7f1Xexb5MBK6fZM9yZtDpCcB88Al7DoC7LWec-w~apjUcPYMicBq3ks43uM4wJUwJifBmM95AHehpGML9LlKaK6wcFOxxcfzWKjUullNrw4dMMN42u2vScDix2xEMXDqRGf0b8EBt-3Ya3PfD7dA2lgV1eZmswpfoG9lvqg__"
+                        alt="Golang">
+                    <div class="desc">
+                        <h3>Golang</h3>
+                        <p>Back End</p>
+                    </div>
+
+                </div>
+                <div class="course">
+                    <img src="https://s3-alpha-sig.figma.com/img/776d/61eb/3151d57401ac4a492f34667721e65030?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AAWd~n7ODFnG-Wz7056cUFWiFSzQShLWbXOnL0OolHbo3MQD5QWQ3bWZKKZCtAQGE~YvePTcAA6ZFIgby0WDubHJi5F3LV7vwKyok9DeTRzJyWglb40bixQOKMt0EtV~pY3t-wCymI3ygHcFF6qO7FgdXnBo7WyXa9vu9eU3fw2DLP0lwGde03I2yYb21bgIZKZHuIw73M4yYBdysJ4nql9uNA7XT2jEztsHI4WRraCDjs5hzcGY1F~uSsZIdOj080mUvyaq1BCoFQrPKb1XcY2OtplF2c-KBlsdyBls7jfagH-E0JbKjCnNi5lm1dOn6SNEAgV9CtMBAGTt1CePcQ__"
+                        alt="Flutter">
+                    <div class="desc">
+                        <h3>Flutter</h3>
+                        <p>Android</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pur-card">
+            <div class="section-title">
+                <h3>Kelas Terbaru</h3>
+                <h2>Kelas Terbaru<br>Online Di Lime <span style="color:#84CC16;">Code</span></h2>
+                <a href="#" class="btn btn-custom">Semua Kelas</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a href="{% url 'customer_insert' %}">
+                                <img src="https://s3-alpha-sig.figma.com/img/7d8e/8aaf/339498f6c88cb71113af868f6af7266e?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QKBQmKbEm7hiGiIpA5Y0cKMj7p4FL1jJgGlEviUQi0Af8c6a~pJEPT3nhuDLQ-Dcl2GMaFZ0GsOjdkMiyrKMPgiTxjcwNaYKdDuIgk1-ldBhBmXa5mZjWv59rVm0btOtJ-bTfXIJReWmNIN1b7G0W5zWGbkuZCb2oTKbh1IDuq2E6fWo6QhfaWupl95WaKfJypHdSBZ-Zhz577JOZv8zniMcYWF6k2cyaRmIcN7Dgx4jRIWygnPRjxI76aJ0OwT2ht18rxHyYTIWShaBBzX14IXOZtdjW90OsgegXG0acu21Y~3tcXXkXrpLpb1lnWwDXvfk4oGrlwXHxs4jzLUGJw__"
+                                    alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Freelancer UI/UX<br>& Illustration Design</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Freelancer UI/UX<br>& Illustration Design</h5>
+                            <div class="price">Rp. 567,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a target="_blank" href="templates/base.html">
+                                <img src="https://s3-alpha-sig.figma.com/img/e19a/7035/e83837e6e9fe7af07dd4baabfa6ddcb6?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JtPKn5VOyErKCYbum9wMT6mfA0IYCWkm1tPhcVnQF5~cJaFsN74aECA2Tu5qI-sQ3TfEzPay8CyPjI6Tk9P~y4ypaHxGYJkvJePtn9WeYb28ORLLFFxzHSbwCPuR5piwIRB8zz3Richs49dy~SkqA9j6RBmFs6xtjEXATgKEWhxdkI20kSOoHwWrZDpzRniN-N6uP~OSNemHDyp6O3cehvb1EplhrjwyItKuvAxRhw7s4utVX9Yy96~6Oz0DT8~cG7uDdvqL~spnySMx~6hdHWXUMVRchhQYsGZR9JxAGmZYQTuOhvIqiI6Pzuzj16rm0y3zhqwEOP2wu~sCkCqR6g__"
+                                    alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Full-Stack<br>Laravel React JS</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Full-Stack<br>Laravel React JS</h5>
+                            <div class="price">Rp. 690,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a target="_blank" href="templates/base.html">
+                            <img src="https://s3-alpha-sig.figma.com/img/d77a/4808/b275bec186b57448c8e966373d294ebb?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hneXFI5wFFk92HPefVcNo9ePaIBi3V2NJjv8BkHsAZyhCYEMHZKVswc4YAUrZtaQORAjKNilyszkzVu1X5lsQHHN3IZEqTJ5T-YNXOkqRDWowYyETMwi3qWgOn9H~du997ngT0R9aGWMMNi-e4kUbDFtd5D-BWpUN9znmXwv9UZNxrXVKIg5RYmlRNy7eOEe6blOy~e95Aufr4lFVqvlLgy1x0jM09yv0dKE3swt2J-ajbOtY0gIb4OwgbVfMrCQ1pxnpfGKZD6l0VrveFZOa7D8rTEcZgFDS0o5BSqclau3UCwgI6i4kepAmUb5FZY1HNBt4BFiQ-FpN5L8kdpiXA__"
+                                alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Full-Stack Laravel Flutter</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Full-Stack Laravel Flutter</h5>
+                            <div class="price">Rp. 690,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a target="_blank" href="templates/base.html">
+                            <img src="https://s3-alpha-sig.figma.com/img/a4f4/79b5/3164147075a83f6b0b38970921e8e408?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E8diFj-8qY5JTdx1E6vGajB208CNfWt-sAt34BqbYfofy9YfcYku65JUib-p3hzw-W0LuxdFC5YMmRmolUOITVTcwn5txqqNuL8qXbcp43PvB1cm0LMV3HAPlFaNaVk1KDzcjEMqiTq3WhdVSbWEwtWeoXwrFqvkFwyI7XaXnaycXqBwdu5TQR888Jc4dx0yNXbITuAaXSoQXja2IzfeD3PIIXzKBWi4ph8MWmxQ6QCHajdLXxfJIXO4oqanL27ylU2ZL40iebMLvS10kCHPrYweqe8g-j0KCBfr7ad1yf9EsD261WwY7TM1-j~7HqxepGgpaXQf9CItH3b1txwnQQ__"
+                                alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Full-Stack<br>Laravel React JS</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Full-Stack<br>Laravel React JS</h5>
+                            <div class="price">Rp. 690,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a target="_blank" href="templates/base.html">
+                            <img src="https://s3-alpha-sig.figma.com/img/30b9/cda3/a7b2847bbbe09d8a9b8a047a49e4d50c?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VpHB14kBR6cSbcm5x-Oe68ise5Iwfjg2Il9SUghOxAf3KZEqaBiSdruappIo-kXuLoG-z1ZEY70xErUxXP3SOOL9z0Jv79m6e5AmHU8NI9jOPO-UswKfdRX1Q-rUwNHpwWgbSHOL0pEhJPuGasy7rtfEzvxdOyvqsuyZBkVeMi~rtlMFywEh4TVOH9-39yAstMfamk8r7LAU1-cpleiaC9GTQDbIhbtXvyQT~ZsLzaDTS-1f9f0yeiK6rS25Rd1afpg-ycc98k4JlXZcPkokky2FHjY3a1AwuU07ILD3Npn3KwdzUntwUy145wJpiSTRLKx~vhnph3yu0LyMuLSnxw__"
+                                alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Freelancer UI/UX<br>& Illustration Design</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Freelancer UI/UX<br>& Illustration Design</h5>
+                            <div class="price">Rp. 690,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cord cord-custom">
+                        <div class="course-card">
+                            <a target="_blank" href="templates/base.html">
+                            <img src="https://s3-alpha-sig.figma.com/img/7d9b/1a1a/f6935cc346d6d49883472d729147dff2?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FeBxPx5OZvpFn1CpVp8MODvRrP0BkPwbWdD0Ym2TCk9cqwceeMoBvvHuFNOl82OUiSR8272Ho9L0CTe3gu234Uc~SqGg4i-hT0jKyaor69sNiEXsN9mletv3rNBb0xnHnX2FcU~Mx-HV1PJR0BS9Mw6wiF~4Pv6ZNM-z2udF2P14G~tb1pI1HiyDV3eD3Z9drcWEDQ-xFI0gkLn9LRNOeyyi41RWY1LwkJxnQRjlqKFNtRBZbHW5w3jUvwcrYeXA~tjgT50ccK3noDJIqQ-no8Z~58q5rRYnWBwV2a5DEKpDYbR7J3pN1XqPPoccYiY~pKAlrhRy8vqldw-NTJxooQ__"
+                                alt="Course Image" class="course-img">
+                            </a>
+                            <div class="course-content">
+                                <h3 class="course-title">Complete Full-Stack Laravel Flutter</h3>
+                            </div>
+                        </div>
+                        <div class="m1">
+                            <p class="m1-text">By Adriana Silva</p>
+                            <h5 class="m1-title">Complete Full-Stack Laravel Flutter</h5>
+                            <div class="price">Rp. 690,000</div>
+                            <p class="m1-rating"><span
+                                    class="badge badge-js">JS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fas fa-star"></span>4.5 (penilaian)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>LimeCode</h2>
+                <p>Lime Code Belajar Coding Simpel.</p>
+                <p><i class="fa fa-map-marker"></i>Jl. Adama Makassar, Indonesia</p>
+                <p><i class="fa fa-phone"></i>+62 8234-3432-4235</p>
+                <p><i class="fa fa-envelope"></i> meduplife@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <h3>Stay Update To Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter Your Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Dibuat Oleh <strong>Syahrul Saleh</strong>, Menggunakan Tailwind css dan Js. &copy;<strong>@2024</strong>
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"></a><i class="fab fa-facebook"></i>
+                <a href="https://www.twitter.com" target="_blank"></a><i class="fab fa-twitter"></i>
+                <a href="https://www.instagram.com/?hl=en" target="_blank"></a><i class="fab fa-instagram"></i>
+                <a href="https://www.youtube.com" target="_blank"></a><i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
